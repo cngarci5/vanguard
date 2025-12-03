@@ -1,7 +1,8 @@
-/* CSS BY YOUR NAME */
+/* CSS BY Caitlin Garcia */
 
 /* IMPORTED FONTS*/
-/* IMPORT "INTER" FROM GOOGLE FONTS"
+/* IMPORT "INTER" FROM GOOGLE FONTS"*/
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 
 /* CSS RESET */
 /* http://meyerweb.com/eric/tools/css/reset/
@@ -62,10 +63,6 @@ table {
     --font: "Inter", sans-serif;
 }
 
-/* GLOBAL STYLES (MOBILE FIRST (SMALL) */
-
-/* MIN-WIDTH OF THE PAGE SHOULD NOT GO BELOW 400PX */
-
 /* ADD A DIV WITH THE CLASS OF CONTAINER TO EVERY CONTENT CONTAINER THIS IS ALLOW THE BASE ELEMENTS TO BE 100% WIDTH, BUT CONSTRAIN THE ACTUAL CONTENT TO 90% */
 .container {
     width: 90%;
@@ -73,27 +70,314 @@ table {
     margin: 0 auto;
 }
 
-/* ADD TO "INNOVATION & INVESTMENT SECTION (Photo by Kevin Matos on Unsplash) */
- {
-    background: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url('images/vanguard-hero.jpg') no-repeat center center/cover;
-    height: 80vh;
-    display: grid;
-    place-items: center;
-    text-align: center;
-    padding: 1rem;
-    overflow: hidden;
+/* GLOBAL STYLES (MOBILE FIRST (SMALL) */
+/* MIN-WIDTH OF THE PAGE SHOULD NOT GO BELOW 400PX */
+body {
+    min-width: 450px;
+    line-height: normal; /* Fix sizes */
+    font-family: var(--font);
+    color: var(--black);
+    background-color: var(--black);
+}
+
+header {
+    padding: 1rem 2rem;
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: space-between;
+    color: var(--white);
+    background-color: var(--black);
+}
+
+header h1 {
+    display: flex;
+    position: relative;
+    gap: 1rem;
+    align-items: center;
+    font-size: 4rem;
+    overflow: visible;
+    color: var(--blue);
+    background-color: var(--black);
 }
 
 /* ADD FLOATING SVG LOGO BEFORE THE H1 */
- {
+ header h1::before {
     content: "";
-
-    left:-.5rem;
-    width: 3.75rem;
-    height: 3.75rem;
+    position: absolute;
+    width: 3rem;
+    height: 3rem;
+    left: -2.5rem;
+    top: 0.5rem;
     background: url('images/vanguard-logo.svg') no-repeat center/contain;
+ }
 
+ header h2 {
+    visibility: hidden;
+ }
+
+header nav ul {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    margin-top: 0.3rem;
 }
+
+header nav a {
+    font: 1.5rem;
+    text-decoration: none;
+    transition: color 0.5s;
+    color: var(--white);
+}
+
+header nav a:hover {
+    color: var(--blue);
+}
+
+/* ADD TO "INNOVATION & INVESTMENT SECTION (Photo by Kevin Matos on Unsplash) */
+#about {
+    background: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url('images/vanguard-hero.jpg') no-repeat center center/cover;
+    display: flex;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    justify-content: center;
+    padding: 4rem 1rem;
+    text-align: center;
+    flex-direction: column;
+    height: 80vh;
+    overflow: hidden;
+    color: var(--white);
+    background-color: var(--white);
+}
+
+#about h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    font-weight: bold;
+}
+
+#about p {
+    margin: 0 1rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    max-width: 600px;
+    margin: 0 auto;
+    font-size: 1rem;
+    color: var(--white);
+}
+
+#about p:nth-of-type(2) {
+    width: auto;
+    max-width: 400px;
+    display: inline-block;
+    padding: 0.50rem 1rem;
+    gap: 2rem;
+    text-align: center;
+    border-radius: 5px;
+    transition: background 0.5s ease;
+    max-width: 600px;
+    margin: 0 auto;
+    color: var(--white);
+    background-color: var(--blue);
+}
+
+#about p:nth-of-type(2):hover {
+    background: var(--blue);
+}
+
+#expertise {
+    padding: 2rem 1rem;
+    text-align: center;
+    background-color: var(--white);
+}
+
+#expertise h2 {
+    font-size: 1.5rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    font-weight: bold;
+    color: var(--black);
+}
+
+#expertise p {
+    font-size: 1rem;
+    margin-top: 1.5rem;
+    margin: 0 auto;
+    text-align: center;
+    max-width: 600px;
+    color: var(--black);
+}
+
+#services {
+    padding: 1.5rem 1rem;
+    background-color: var(--white);
+}
+
+#services h2 {
+    margin-bottom: 2rem;
+    font-size: 1.5rem;
+    text-align: center;
+    font-weight: bold;
+    color: var(--black);
+}
+
+#services h3, p {
+    display: block;
+    width: 50%;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+#services h3 {
+    padding: 1rem;
+    margin-top: 1.15rem;
+    border-radius: 5px 5px 0 0;
+    font-weight: bold;
+    color: var(--white);
+    background-color: var(--blue);
+}
+
+#services p {
+    padding: 0 1rem 1rem;
+    margin-top: 0;
+    margin-bottom: 1rem;
+    border-radius: 0 0 5px 5px;
+    max-width: 800px;
+    color: var(--white);
+    background-color: var(--blue);
+}
+
+#results {
+    padding: 2rem 1rem;
+    text-align: left;
+    color: var(--white);
+    background-color: var(--blue);
+}
+
+#results h2 {
+    max-width: 450px;
+    margin-bottom: 1rem;
+    font-size: 2rem;
+    text-align: left;
+    font-weight: bold;
+}
+
+#results p {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    text-align: left;
+}
+
+
+#profits {
+    padding: 2rem 1rem;
+    color: var(--white);
+    background-color: var(--blue);
+}
+
+#profits h3 {
+    margin-bottom: 1rem;
+    font-size: 2rem;
+    font-weight: bold;
+    color: var(--white);
+}
+
+#profits table {
+    overflow: hidden;
+    margin: 0 auto;
+    border-radius: 5px;
+    color: var(--white);
+    background-color: var(--black);
+}
+
+#profits th, #profits td {
+    padding: 0.50rem;
+    text-align: left;
+}
+
+#profits th {
+    background-color: var(--charcoal);
+}
+
+#growth {
+    padding: 1rem;
+    text-align: center;
+    color: var(--white);
+    background-color: var(--blue);
+}
+
+#growth h3 {
+    margin-bottom: 1rem;
+    font-size: 2rem;
+    font-weight: bold;
+    color: var(--white);
+}
+
+#contact {
+    padding: 2rem 1rem;
+    text-align: center;
+    color: var(--white);
+    background-color: var(--black);
+}
+
+#contact h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    font-weight: bold;
+    color: var(--white);
+}
+
+#contact p {
+    text-align: center;
+    margin: 0 auto;
+    margin-bottom: 2rem;
+    max-width: 400px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
+    max-width: 500;
+    margin-top: 1rem;
+    color: var(--white);
+}
+
+form input, form textarea {
+    padding: 0.50rem;
+    width: 100%;
+    margin-bottom: 1rem;
+    max-width: 500px;
+    border: 2px solid var(--blue);
+}
+
+form input[type="submit"] {
+    margin: 0 auto;;
+    cursor: pointer;
+    width: 50%;
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: background 0.5s;
+    color: var(--white);
+    background-color: var(--blue);
+}
+
+form input[type="submit"]:hover {
+    background: var(--red);
+}
+
+footer {
+    padding: 2rem 1.50rem;
+    text-align: center;
+    color: var(--white);
+    background-color: var(--black);
+}
+
+footer a {
+    color: var(--blue);
+}
+
 /* THIS ONE IS DONE FOR YOU */
 #bar-chart {
     display: grid;
@@ -106,6 +390,7 @@ table {
     max-width: 800px;
     padding: 1rem;
     position: relative;
+    margin: 0 auto;
 }
 /* ADD ON TRANSITION ON HEIGHT */
 .bar {
@@ -113,8 +398,8 @@ table {
     background: var(--charcoal);
     border-radius: 10px;
     position: relative;
-    transition: ;
-    height: 0;
+    transition: height 0.5s ease;
+    height: 100px;
 }
 /* THIS ONE IS DONE FOR YOU */
 .bar::after {
@@ -140,8 +425,8 @@ table {
     animation: stepUp 1s ease-in-out forwards;
 }
 
-
 /* MEDIA QUERIES (MEDIUM) */ 
+@media (min-width: 800px) {
 
     #results {
         grid-template-columns: 1fr 1fr;
@@ -156,6 +441,25 @@ table {
     .bar-chart {
         width: 50%;
     }
-
+}
 
 /* MEDIA QUERIES (LARGE) */
+@media (min-width: 1024px) {
+    header {
+        padding: 1.5rem 2rem;
+    }
+
+    #services h3 {
+        width: 50%;
+    }
+
+    #contact {
+        width: 60%;
+        margin: 0 auto;
+    }
+
+    form {
+        width: 80%;
+        margin: 0 auto;
+    }
+}
