@@ -72,6 +72,33 @@ table {
 
 /* GLOBAL STYLES (MOBILE FIRST (SMALL) */
 /* MIN-WIDTH OF THE PAGE SHOULD NOT GO BELOW 400PX */
+@keyframes fadeIn {
+  from  {opacity: 0;}
+  to {opacity: 1;}
+}
+
+@keyframes slideUp {
+    from {
+    opacity: 0;
+    transform: translateY(35px);
+}
+to {
+    opacity: 1;
+    transform: translateY(0);
+}
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: scale(0.50);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
 body {
     min-width: 450px;
     line-height: normal; /* Fix sizes */
@@ -88,6 +115,7 @@ header {
     justify-content: space-between;
     color: var(--white);
     background-color: var(--black);
+    animation: slideDown 0.5s ease-out;
 }
 
 header h1 {
@@ -154,6 +182,7 @@ header nav a:hover {
     font-size: 1.5rem;
     margin-bottom: 1rem;
     font-weight: bold;
+    animation: slideUp 2s ease-out;
 }
 
 #about p {
@@ -164,6 +193,10 @@ header nav a:hover {
     margin: 0 auto;
     font-size: 1rem;
     color: var(--white);
+}
+
+#about p:nth-of-type(1) {
+    animation: fadeIn 2s ease-out;
 }
 
 #about p:nth-of-type(2) {
@@ -179,10 +212,11 @@ header nav a:hover {
     margin: 0 auto;
     color: var(--white);
     background-color: var(--blue);
+    animation: scaleUp 2s ease-out;
 }
 
 #about p:nth-of-type(2):hover {
-    background: var(--blue);
+    background: var(--red);
 }
 
 #expertise {
@@ -197,6 +231,7 @@ header nav a:hover {
     margin-bottom: 1rem;
     font-weight: bold;
     color: var(--black);
+    animation: slideUp 2s ease-out;
 }
 
 #expertise p {
@@ -206,6 +241,7 @@ header nav a:hover {
     text-align: center;
     max-width: 600px;
     color: var(--black);
+    animation: fadeIn 2s ease-out;
 }
 
 #services {
@@ -219,6 +255,7 @@ header nav a:hover {
     text-align: center;
     font-weight: bold;
     color: var(--black);
+    animation: slideUp 2s ease-out;
 }
 
 #services h3, p {
@@ -235,6 +272,7 @@ header nav a:hover {
     font-weight: bold;
     color: var(--white);
     background-color: var(--blue);
+    animation: fadeIn 2s ease-out;
 }
 
 #services p {
@@ -245,6 +283,7 @@ header nav a:hover {
     max-width: 800px;
     color: var(--white);
     background-color: var(--blue);
+    animation: fadeIn 2s ease-out;
 }
 
 #results {
@@ -260,12 +299,14 @@ header nav a:hover {
     font-size: 2rem;
     text-align: left;
     font-weight: bold;
+    animation: slideUp 2s ease-out;
 }
 
 #results p {
     font-size: 1rem;
     margin-bottom: 1rem;
     text-align: left;
+    animation: fadeIn 2s ease-out;
 }
 
 
@@ -280,6 +321,7 @@ header nav a:hover {
     font-size: 2rem;
     font-weight: bold;
     color: var(--white);
+    animation: slideUp 2s ease-out;
 }
 
 #profits table {
@@ -288,6 +330,7 @@ header nav a:hover {
     border-radius: 5px;
     color: var(--white);
     background-color: var(--black);
+    animation: scaleUp 2s ease-out;
 }
 
 #profits th, #profits td {
@@ -301,7 +344,7 @@ header nav a:hover {
 
 #growth {
     padding: 1rem;
-    text-align: center;
+    text-align: left;
     color: var(--white);
     background-color: var(--blue);
 }
@@ -325,6 +368,7 @@ header nav a:hover {
     margin-bottom: 1rem;
     font-weight: bold;
     color: var(--white);
+    animation: slideUp 2s ease-out;
 }
 
 #contact p {
@@ -332,6 +376,7 @@ header nav a:hover {
     margin: 0 auto;
     margin-bottom: 2rem;
     max-width: 400px;
+    animation: fadeIn 2s ease-out;
 }
 
 form {
@@ -342,6 +387,7 @@ form {
     max-width: 500;
     margin-top: 1rem;
     color: var(--white);
+    animation: scaleUp 2s ease-out;
 }
 
 form input, form textarea {
@@ -372,6 +418,7 @@ footer {
     text-align: center;
     color: var(--white);
     background-color: var(--black);
+    animation: fadeIn 2s ease-out;
 }
 
 footer a {
